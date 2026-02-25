@@ -1,0 +1,11 @@
+2026-02-25 11:20:47,988 - INFO - Start solving model...
+2026-02-25 11:20:48,020 - INFO - Solve finished successfully.
+2026-02-25 11:20:48,021 - INFO - Optimal Schedule Length: 11.0
+2026-02-25 11:20:48,021 - INFO - 
+Machine 0: job_1_task_0   job_0_task_0   
+           [0,2]          [2,5]          
+Machine 1: job_2_task_0   job_0_task_1   job_1_task_2   
+           [0,4]          [5,7]          [7,11]         
+Machine 2: job_1_task_1   job_2_task_1   job_0_task_2   
+           [2,3]          [4,7]          [7,9]          
+
