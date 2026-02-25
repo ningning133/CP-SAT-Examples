@@ -1,11 +1,22 @@
-"""Minimal jobshop example (refactored with logging and separated solve/output)."""
+"""Minimal jobshop example"""
+
+"""Example Problem ( From:https://developers.google.com/optimization/scheduling/job_shop )
+Below is a simple example of a job shop problem, in which each task is labeled by a pair of numbers (m, p)
+ where m is the number of the machine the task must be processed on and p is the processing time of the task
+ — the amount of time it requires.
+ (The numbering of jobs and machines starts at 0.)
+job 0 = [(0, 3), (1, 2), (2, 2)]
+job 1 = [(0, 2), (2, 1), (1, 4)]
+job 2 = [(1, 4), (2, 3)]
+In the example, job 0 has three tasks. The first, (0, 3), must be processed on machine 0 in 3 units of time.
+The second, (1, 2),must be processed on machine 1 in 2 units of time, and so on. Altogether, there are eight tasks."""
+
 import collections
 from utils.logger_config import setup_logger
 from ortools.sat.python import cp_model
 
 # ===========================
 # Logging Configuration
-# ===========================
 logger = setup_logger(logger_name="jsp")
 
 # Data Class
